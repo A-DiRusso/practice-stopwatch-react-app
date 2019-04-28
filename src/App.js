@@ -26,11 +26,14 @@ class App extends React.Component {
     );
   }
   _clickedButton = () => {
-    this.interval = setInterval(() => {
-      this.setState({
-        tickingTime: this.state.tickingTime + 1
-      })
-    }, 1000);
+    if(this.state.tickTickTick) {
+      this.interval = setInterval(() => {
+        this.setState({
+          tickingTime: this.state.tickingTime + 1
+        })
+      }, 1000);
+  
+    }
   } 
   _resetTime = () => {
     this.setState({
