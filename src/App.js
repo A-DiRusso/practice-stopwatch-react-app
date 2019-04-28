@@ -17,11 +17,14 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Stopwatch tick={this.state.tickingTime}/>
+          <Stopwatch clickHandler={this._clickedButton} timerBool={this.tickTickTick}/>
         </header>
       </div>
     );
   }
+  _clickedButton = () => {
+    console.log('click')
+  } 
 }
 
 
