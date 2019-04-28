@@ -19,7 +19,8 @@ class App extends React.Component {
         <header className="App-header">
           <Stopwatch clickHandler={this._clickedButton} 
                      timerBool={this.tickTickTick}
-                     timerTime={this.state.tickingTime}/>
+                     timerTime={this.state.tickingTime}
+                     resetHandler={this._resetTime}/>
         </header>
       </div>
     );
@@ -27,6 +28,9 @@ class App extends React.Component {
   _clickedButton = () => {
     console.log('click')
   } 
+  _resetTime = () => {
+    console.log('clack');
+  }
 }
 
 
