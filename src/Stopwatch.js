@@ -1,10 +1,9 @@
 import React from 'react'
 
-function Stopwatch(props) {
-  return (
-    <div>
-      <h2>{props.tick}</h2>
-    </div>
+function Stopwatch({clickHandler, timerBool}) {
+  return (<>
+            <button onClick={clickHandler}>{timerBool ? `Stop` : `Start`}</button>
+          </>     
   )
 }
 
