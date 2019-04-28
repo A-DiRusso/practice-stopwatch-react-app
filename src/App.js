@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tickingTime: 0,
+      tickingTime: 10,
       tickTickTick: false
     };
   }
@@ -29,7 +29,9 @@ class App extends React.Component {
     console.log('click')
   } 
   _resetTime = () => {
-    console.log('clack');
+    this.setState({
+      tickingTime: 0
+    })
   }
 }
 
