@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tickingTime: 10,
+      tickingTime: 0,
       tickTickTick: false
     };
   }
@@ -26,7 +26,11 @@ class App extends React.Component {
     );
   }
   _clickedButton = () => {
-    console.log('click')
+    this.interval = setInterval(() => {
+      this.setState({
+        tickingTime: this.state.tickingTime + 1
+      })
+    }, 1000);
   } 
   _resetTime = () => {
     this.setState({
