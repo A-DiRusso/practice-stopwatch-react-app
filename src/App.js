@@ -27,6 +27,16 @@ class App extends React.Component {
   }
   _clickedButton = () => {
     if(this.state.tickTickTick) {
+      this.setState({
+        tickTickTick: false
+      })
+      clearInterval(this.interval)
+    } else {
+      this.setState({
+        tickTickTick: true
+      })
+    }
+    if(this.state.tickTickTick) {
       this.interval = setInterval(() => {
         this.setState({
           tickingTime: this.state.tickingTime + 1
