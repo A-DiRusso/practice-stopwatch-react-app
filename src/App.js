@@ -25,14 +25,14 @@ class App extends React.Component {
       </div>
     );
   }
-  _clickedButton = () => {
+  _clickedButton = async () => {
     if(this.state.tickTickTick) {
-      this.setState({
+      await this.setState({
         tickTickTick: false
       })
       clearInterval(this.interval)
     } else {
-      this.setState({
+      await this.setState({
         tickTickTick: true
       })
     }
@@ -49,6 +49,7 @@ class App extends React.Component {
     this.setState({
       tickingTime: 0
     })
+    clearInterval(this.interval)
   }
 }
 
